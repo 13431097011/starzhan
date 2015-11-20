@@ -8,6 +8,7 @@
 var crypto = require('crypto');
 var User = require('../models/user.js');
 module.exports = function(app){
+	
 	app.get('/', function(req, res) {
 		res.render('index', { active: {index:'active'} });
 	});
