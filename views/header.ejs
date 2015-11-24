@@ -15,7 +15,13 @@
       <nav class="blog-nav">
        <a class="blog-nav-item  <%= active.index %>" href="/">主页</a>
         <a class="blog-nav-item <%= active.content %>" href="/content">博客</a>
+        <% if (user) { %>
         <a class="blog-nav-item <%= active.post %>" href="/post">发博客</a>
+         <%= user.name %>,<a class="blog-nav-item <%= active.logout %>" href="/logout">退出</a>
+        <% }else{ %>
+        <a class="blog-nav-item <%= active.login %>" href="/login">登录</a>
+        <a class="blog-nav-item <%= active.reg %>" href="/reg">注册</a>
+       <% } %>
       </nav>
     </div>
 </div>
