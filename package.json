@@ -19,6 +19,7 @@
     "connect-mongo":"~0.8.x",
     "connect":"~3.x",
     "connect-flash": "*",
-	"markdown": "~0.5.0"
+	"markdown": "~0.5.0",
+	"multer":"~0.1.6"
   }
 }

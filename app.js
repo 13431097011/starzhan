@@ -12,6 +12,7 @@ var MongoStore = require('connect-mongo')(session);
 
 var routes = require('./routes/index');
 var settings = require('./settings');
+var multer = require('multer');
 //var users = require('./routes/users');
 
 var app = express();
@@ -19,6 +20,12 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.use(multer({
+	dest:'./public/images',
+	rename:function(fieldname,filename){
+		return filename;
+	}
+}));
 app.use(flash());
 app.use(session({
   secret:settings.cookieSecret,
