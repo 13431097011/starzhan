@@ -18,6 +18,7 @@
     "express-session":"~1.11.x",
     "connect-mongo":"~0.8.x",
     "connect":"~3.x",
-    "connect-flash": "*"
+    "connect-flash": "*",
+	"markdown": "~0.5.0"
   }
 }
